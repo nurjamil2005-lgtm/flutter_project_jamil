@@ -56,7 +56,7 @@ class _NewsFeedState extends State<NewsFeed> {
         isViewed: false),
   ];
 
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
