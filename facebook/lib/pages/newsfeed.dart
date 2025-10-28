@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:facebook/model/story_model.dart';
 import 'package:facebook/widgets/createpost.dart';
+import 'package:facebook/widgets/newsfeed_post.dart';
 import 'package:facebook/widgets/storieslist.dart';
 import 'package:flutter/material.dart';
 
@@ -73,14 +74,27 @@ class _NewsFeedState extends State<NewsFeed> {
         ],
       ),
 
-      body: Column(
-        children: [
-          const Createpost(),
-          StoriesList(
-            stories : stories,
-            onStoryTap : (story) {},
-          )
-        ],
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            Createpost(),
+            //StoriesList(),
+            NewsFeedPost(
+              name: "Jemima",
+              caption: "Having a great day!",
+              imageurl: "assets/myday/myday2.jpg"),
+
+            NewsFeedPost(
+              name: "Noor",
+              caption: "Having a great day!",
+              imageurl: "assets/myday/myday1.jpg"),
+
+            NewsFeedPost(
+              name: "Loki",
+              caption: "Having a great day!",
+              imageurl: "assets/myday/myday4.jpg"),
+          ],
+        ),
       ),
     );
   }
